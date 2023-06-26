@@ -1,0 +1,55 @@
+POST http://127.0.0.1:8000/api/signup 
+Content-Type: application/json
+
+{ "username": "Mozaire2", "password": "Pass1234!", "email": "mozaire@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/api/login 
+Content-Type: application/json
+
+{ "username": "Mozaire2", "password": "Pass1234!" }
+
+
+###
+GET http://127.0.0.1:8000/api/test_token 
+Content-Type: application/json
+Authorization: token b765c39b59f1215ee1a6874b089826abfc153f5b
+
+### 
+GET http://127.0.0.1:8000/api/todos/completed
+Content-Type: application/json
+Authorization: token f38d13474e461517560e4012c0ef3bf1a94a6afa
+
+
+### 
+GET http://127.0.0.1:8000/api/todos
+Content-Type: application/json
+Authorization: token 9d5e6e67d6ec95f6dc20c4f7e41c17cd86d0201f
+
+
+###
+PUT http://127.0.0.1:8000/api/todos/1/update
+Content-Type: application/json
+Authorization: token f38d13474e461517560e4012c0ef3bf1a94a6afa
+
+{ "Completed": true, "is_favorite": true }
+
+###
+POST http://127.0.0.1:8000/api/todos/create 
+Content-Type: application/json
+Authorization: token 6ccbb47d061a09d08500d42e300b2f569029c6cb
+
+{ "Title": "title", "Description": "Pass1234!" }
+
+
+###
+DELETE http://127.0.0.1:8000/api/todos/delete/2 
+Content-Type: application/json
+Authorization: token 9d5e6e67d6ec95f6dc20c4f7e41c17cd86d0201f
+
+
+###
+GET http://127.0.0.1:8000/api/logout 
+Content-Type: application/json
+Authorization: token 61eceaae3dca9fc2069d6973de84951173d8b989
